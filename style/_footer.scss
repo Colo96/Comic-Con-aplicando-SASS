@@ -1,0 +1,115 @@
+$gold: gold;
+$black: black;
+$white: white;
+$silver: silver;
+
+#footer{
+    width: 100%;
+    grid-area: footer;
+    background-color: $black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "up_button up_button"
+                         "footer_navbar social_media"
+                         "copy_right copy_right";
+}
+
+#up_button{
+    grid-area: up_button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        display: inline-block;
+        text-decoration: none;
+        color: $white;
+        padding: 1%;
+        margin: 1%;
+        border: 1px solid $gold;
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: 'Libre Franklin', sans-serif;
+        &:hover{
+            background-color: $silver;
+            color: $black;
+            font-weight: bold;
+        }
+        &:focus{
+            background-color: $gold;
+            color: $black;
+            font-weight: bold;
+        }
+    }
+}
+
+#footer_navbar{
+    grid-area: footer_navbar;
+    ul{
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li{
+            margin: 2%;
+            width: 15%;
+            a{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                padding: 5%;
+                text-decoration: none;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: bold;
+                font-family: 'Libre Franklin', sans-serif;
+                &:hover{
+                    background-color: $silver;
+                    color: $black;
+                    font-weight: bold;
+                }
+                &:focus{
+                    background-color: $gold;
+                    color: $black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+#social_media{
+    grid-area: social_media;
+    ul{
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        li{
+            width: 20%;
+            a{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                text-decoration: none;
+                padding: 2%;
+            }
+        }
+    }
+}
+
+#copy_right{
+    width: 100%;
+    grid-area: copy_right;
+    p{
+        text-align: center;
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: 'Libre Franklin', sans-serif;
+        padding: 2%;
+    }
+}
